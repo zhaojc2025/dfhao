@@ -4,7 +4,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://${MYSQL_URL:127.0.0.1}:${MYSQL_PORT:3306}/ishiro?serverTimeZone=Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+      url: jdbc:mysql://${MYSQL_URL:127.0.0.1}:${MYSQL_PORT:3306}/dfhao_shiro?serverTimeZone=Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
       username: ${MYSQL_USERNAME:root}
       password: ${MYSQL_PWD:123456}
   redis:
@@ -19,7 +19,7 @@ logging:
     sql: debug
     web: info
   file:
-    path: ./log/demo-shiro
+    path: ./log/shiro
 springdoc:
   api-docs:
     # 是否开启文档功能，默认为true，可不配置
