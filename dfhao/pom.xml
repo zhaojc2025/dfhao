@@ -12,7 +12,8 @@
 
     <modules>
         <module>dfhao-base-shiro</module>
-<!--        demo-->
+        <module>dfhao-common-mybatis</module>
+        <!--        demo-->
         <module>dfhao-demo/dfhao-demo-shiro</module>
         <module>dfhao-demo/dfhao-demo-swagger</module>
     </modules>
