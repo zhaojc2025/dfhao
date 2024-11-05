@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfhao.demo.shiro.user.mapper.UserMapper">
+    <select id="queryUserByUserName" resultType="com.dfhao.demo.shiro.user.entry.User">
+        select id, user_name as userName, password from user_t where user_name = #{userName};
+    </select>
+</mapper>

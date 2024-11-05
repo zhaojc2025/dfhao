@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${MYSQL_URL:127.0.0.1}:${MYSQL_PORT:3306}/ishiro?serverTimeZone=Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: ${MYSQL_USERNAME:root}
+      password: ${MYSQL_PWD:123456}
+  redis:
+    host: ${REDIS_URL:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PWD:123456}
+mybatis:
+  type-aliases-package: com.dfhao.shiro.user
+  mapper-locations: classpath:/mapper/*.xml
+logging:
+  level:
+    sql: debug
+    web: info
+  file:
+    path: ./log/demo-shiro
+springdoc:
+  api-docs:
+    # 是否开启文档功能，默认为true，可不配置
+    enabled: true
+  swagger-ui:
+    # 访问ip:port/api，可直接访问Swagger springdoc
+    path: /api

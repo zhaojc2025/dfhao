@@ -12,6 +12,7 @@
 
     <modules>
 <!--        demo-->
+        <module>dfhao-demo/dfhao-demo-shiro</module>
         <module>dfhao-demo/dfhao-demo-swagger</module>
     </modules>
 
