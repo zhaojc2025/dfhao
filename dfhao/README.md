@@ -19,3 +19,14 @@
 
 * 基础特性层
 * shiro 组件
+
+## dfhao-admin
+
+后台管理项目
+
+### 依赖说明
+
+* knife4j
+* lombok
+* mybatis-plus
+* liteflow

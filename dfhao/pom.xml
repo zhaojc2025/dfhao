@@ -11,6 +11,7 @@
     <name>dfhao</name>
 
     <modules>
+        <module>dfhao-admin</module>
         <module>dfhao-base-shiro</module>
         <module>dfhao-base-service</module>
         <module>dfhao-common-mybatis</module>
@@ -58,6 +59,11 @@
             <dependency>
                 <groupId>com.dfhao</groupId>
                 <artifactId>dfhao-common-mybatis</artifactId>
+                <version>${dfhao.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dfhao</groupId>
+                <artifactId>dfhao-base-service</artifactId>
                 <version>${dfhao.version}</version>
             </dependency>
 

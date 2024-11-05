@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_URL:127.0.0.1}:${MYSQL_PORT:3306}/iadmin?serverTimeZone=Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PWD:123456}
+  redis:
+    host: ${REDIS_URL:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PWD:123456}
+logging:
+  level:
+    sql: info
+    web: info
+  file:
+    path: ../log/iadmin
+springdoc:
+  api-docs:
+    # 是否开启文档功能，默认为true，可不配置
+    enabled: true
+  swagger-ui:
+    # 访问ip:port/api，可直接访问Swagger springdoc
+    path: /api
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 字段映射为 javaBean时，自动转驼峰，而不用配置 @TableField
+    map-underscore-to-camel-case: true
