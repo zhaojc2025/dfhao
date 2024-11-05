@@ -1,0 +1,7 @@
+springdoc:
+  api-docs:
+    # 是否开启文档功能，默认为true，可不配置
+    enabled: true
+  swagger-ui:
+    # 访问ip:port/api，可直接访问Swagger springdoc
+    path: /api

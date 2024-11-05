@@ -11,6 +11,8 @@
     <name>dfhao</name>
 
     <modules>
+<!--        demo-->
+        <module>dfhao-demo/dfhao-demo-swagger</module>
     </modules>
 
     <parent>
