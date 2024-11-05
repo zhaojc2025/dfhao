@@ -12,6 +12,7 @@
 
     <modules>
         <module>dfhao-base-shiro</module>
+        <module>dfhao-base-service</module>
         <module>dfhao-common-mybatis</module>
         <!--        demo-->
         <module>dfhao-demo/dfhao-demo-shiro</module>
@@ -53,6 +54,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--dfhao-->
+            <dependency>
+                <groupId>com.dfhao</groupId>
+                <artifactId>dfhao-common-mybatis</artifactId>
+                <version>${dfhao.version}</version>
+            </dependency>
+
             <!--hutool-->
             <dependency>
                 <groupId>cn.hutool</groupId>

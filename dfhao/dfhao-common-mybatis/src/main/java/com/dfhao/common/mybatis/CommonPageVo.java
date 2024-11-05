@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Schema(name = "PageVo", description = "分页结果")
-public class PageVo<T> implements Serializable {
+public class CommonPageVo<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Schema(name = "current", description = "当前页")
@@ -19,10 +19,10 @@ public class PageVo<T> implements Serializable {
     @Schema(name = "rows", description = "查询结果")
     private List<T> rows;
 
-    public PageVo() {
+    public CommonPageVo() {
     }
 
-    public PageVo(long current, long total, List<T> rows) {
+    public CommonPageVo(long current, long total, List<T> rows) {
         this.total = total;
         this.current = current;
         this.rows = rows;
