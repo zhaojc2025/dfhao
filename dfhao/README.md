@@ -9,16 +9,28 @@
 
 ## dfhao-common
 
-* 公共能力层
+* 公共能力
+* 共通方法、工具
 
-## dfhao-base
+## dfhao-common-mybatis
 
-* 基础特性层
+* 公共能力
+* 对数据库操作的基础封装，目前基于 mybatis-plus 进行封装，目的是方便替换成其他的组件
+
+## dfhao-common-excel
+
+* 公共能力
+* 对 excel 导入导出操作的封装
 
 ## dfhao-base-shiro
 
-* 基础特性层
+* 基础特性
 * shiro 组件
+
+## dfhao-base-service
+
+* 基础特性
+* 封装出通用接口，用于配置出的 sql 语句的执行
 
 ## dfhao-admin
 

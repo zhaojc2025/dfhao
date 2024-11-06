@@ -14,7 +14,9 @@
         <module>dfhao-admin</module>
         <module>dfhao-base-shiro</module>
         <module>dfhao-base-service</module>
+        <module>dfhao-common</module>
         <module>dfhao-common-mybatis</module>
+        <module>dfhao-common-excel</module>
         <!--        demo-->
         <module>dfhao-demo/dfhao-demo-shiro</module>
         <module>dfhao-demo/dfhao-demo-swagger</module>
@@ -133,6 +135,18 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+
+            <!--    poi-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>5.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>5.2.2</version>
             </dependency>
 
             <!--    minio   -->
