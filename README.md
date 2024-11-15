@@ -6,7 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/zhaojc2025/dfhao)
 ![GitHub Repo stars](https://img.shields.io/github/stars/zhaojc2025/dfhao)
 
-`dfhao`是`大富豪`的含义，希望每个开发者不忘
+`dfhao`是`大富豪`的含义，希望自己不忘初心
 
 把工作学习中的知识经验积累到这里。形成脚手架，和基础项目
 
@@ -51,6 +51,7 @@
 
 * 阿里云折扣场：[点我进入]()，腾讯云秒杀场：[点我进入]()
 * 阿里云优惠券：[点我领取]()，腾讯云优惠券：[点我领取]()
+* 七牛云：[点我领取](https://s.qiniu.com/R3emMz)
 
 如果你觉得这个项目帮助到了你，请帮助点击 Star
 
@@ -58,7 +59,7 @@
 
 |**支付宝**|**微信**|
 | :-------: |:-------: |
-| ![支付宝](./img/zhifubao.jpg) | ![微信](./img/zhifubao2.jpg) |
+| ![支付宝](http://img.dfhao.top/zhifubao.jpg) | ![微信](./img/zhifubao2.jpg) |
 
 ## 致谢
 
