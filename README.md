@@ -46,22 +46,20 @@
 
 * 使用咨询、需求沟通：[discussions](https://github.com/zhaojc2025/dfhao/discussions)
 * Bug提交：[issues](https://github.com/zhaojc2025/dfhao/issues)
+* qq：619116335
 
 ## 支持
 
-* 阿里云折扣场：[点我进入]()，腾讯云秒杀场：[点我进入]()
-* 阿里云优惠券：[点我领取]()，腾讯云优惠券：[点我领取]()
 * 七牛云：[点我领取](https://s.qiniu.com/R3emMz)
-
-如果你觉得这个项目帮助到了你，请帮助点击 Star
-
-你也可以请作者喝咖啡表示鼓励
+* 如果你觉得这个项目帮助到了你，请帮助点击 Star
+* 你也可以请作者喝咖啡表示鼓励
 
 |**支付宝**|**微信**|
 | :-------: |:-------: |
-| ![支付宝](http://img.dfhao.top/zhifubao.jpg) | ![微信](./img/zhifubao2.jpg) |
+| [<img src="http://img.dfhao.top/zhifubao.jpg" width="300"/>](http://img.dfhao.top/zhifubao.jpg) | ![微信](./img/zhifubao2.jpg) |
 
 ## 致谢
 
-- [JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource) 为项目提供免费的 IDE 授权  
-  [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)
+[JetBrains Open Source](https://www.jetbrains.com/zh-cn/opensource) 为项目提供免费的 IDE 授权
+
+[<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)
