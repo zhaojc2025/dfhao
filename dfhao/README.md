@@ -1,4 +1,12 @@
-# 基于 SpringBoot 的后台项目
+# dfhao
+
+Java 后台项目
+
+## 模块说明
+
+* dfhao-admin 后台单体项目，聚合用户中心等
+* dfhao-common 
+* dfhao-base
 
 * 层级关系：common(公共能力层)-->base(基础特性层)-->product(产品层)
 
@@ -42,3 +50,7 @@
 * lombok
 * mybatis-plus
 * liteflow
+
+## 参考学习
+
+* 若依

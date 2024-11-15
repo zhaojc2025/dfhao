@@ -1,4 +1,6 @@
-# dfhao-vue
+# dfhao-vue 
+
+Vue前端项目
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -37,3 +39,12 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## 模块说明
+
+* 
+
+## 参考学习
+
+* SCUI
+* 若依

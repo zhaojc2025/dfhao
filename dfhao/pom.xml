@@ -17,7 +17,6 @@
         <module>dfhao-common</module>
         <module>dfhao-common-mybatis</module>
         <module>dfhao-common-excel</module>
-        <!--        demo-->
         <module>dfhao-demo/dfhao-demo-shiro</module>
         <module>dfhao-demo/dfhao-demo-swagger</module>
     </modules>
