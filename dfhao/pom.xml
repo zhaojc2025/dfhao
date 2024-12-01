@@ -43,7 +43,7 @@
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <druid-spring-boot-starter.version>1.2.8</druid-spring-boot-starter.version>
 
-        <shiro-spring-boot-web-starter.version>1.8.0</shiro-spring-boot-web-starter.version>
+        <shiro-spring-boot-web-starter.version>2.0.2</shiro-spring-boot-web-starter.version>
         <java-jwt.version>4.4.0</java-jwt.version>
 
         <swagger.version>1.7.0</swagger.version>
