@@ -61,7 +61,7 @@ public class UserController {
 
         // 计算加密结果
         // 使用 MD5 加密，随机盐为用户名，加密次数为 199
-        String hash = new SimpleHash("MD5", password, userName, 199).toHex();
+        String hash = new SimpleHash("MD5", password, "X.0*o", 2).toHex();
 
         //封装用户的登陆数据
         UsernamePasswordToken token = new UsernamePasswordToken(userName, password);

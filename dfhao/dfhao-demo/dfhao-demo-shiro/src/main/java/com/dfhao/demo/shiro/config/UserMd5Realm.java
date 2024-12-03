@@ -15,7 +15,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.ByteSource;
+import org.apache.shiro.lang.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class UserMd5Realm extends AuthorizingRealm {
     @Autowired
     private AuthService authService;
 
-    // 授权
+    // 2.授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         System.out.println("执行授权:" + Thread.currentThread().getName());
@@ -42,7 +42,7 @@ public class UserMd5Realm extends AuthorizingRealm {
         return info;
     }
 
-    // 认证
+    // 1.认证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         System.out.println("执行认证:" + Thread.currentThread().getName());
@@ -60,7 +60,7 @@ public class UserMd5Realm extends AuthorizingRealm {
         }
         // 密码认证，加随机盐
         return new SimpleAuthenticationInfo(user, user.getPassword(),
-                ByteSource.Util.bytes(userName),
+                ByteSource.Util.bytes("X.0*o"),
                 this.getName());
     }
 }

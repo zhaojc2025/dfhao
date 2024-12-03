@@ -55,7 +55,7 @@ public class ShiroConfig {
         HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
         credentialsMatcher.setHashAlgorithmName("MD5");
         // 设置散列次数
-        credentialsMatcher.setHashIterations(199);
+        credentialsMatcher.setHashIterations(2);
         // hex 编码
         credentialsMatcher.setStoredCredentialsHexEncoded(true);
         realm.setCredentialsMatcher(credentialsMatcher);
