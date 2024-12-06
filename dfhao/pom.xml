@@ -41,7 +41,7 @@
         <mysql.version>8.0.33</mysql.version>
         <mybatis-spring-boot-starter.version>2.3.1</mybatis-spring-boot-starter.version>
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
-        <druid-spring-boot-starter.version>1.2.8</druid-spring-boot-starter.version>
+        <druid-spring-boot-starter.version>1.2.22</druid-spring-boot-starter.version>
 
         <shiro-spring-boot-web-starter.version>2.0.2</shiro-spring-boot-web-starter.version>
         <java-jwt.version>4.4.0</java-jwt.version>
@@ -51,7 +51,9 @@
 
         <log4j.version>1.2.17</log4j.version>
         <minio.version>8.5.9</minio.version>
-        <hutool.version>5.8.26</hutool.version>
+        <hutool.version>5.8.29</hutool.version>
+
+        <oshi.version>6.6.5</oshi.version>
     </properties>
 
     <dependencyManagement>
@@ -163,13 +165,20 @@
             <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
-                <version>2.0.52</version>
+                <version>2.0.53</version>
             </dependency>
 
             <dependency>
                 <groupId>com.yomahub</groupId>
                 <artifactId>liteflow-spring-boot-starter</artifactId>
                 <version>2.12.1</version>
+            </dependency>
+
+            <!--硬件信息获取-->
+            <dependency>
+                <groupId>com.github.oshi</groupId>
+                <artifactId>oshi-core</artifactId>
+                <version>${oshi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -200,9 +209,26 @@
                     <skip>true</skip>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
