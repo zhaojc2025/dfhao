@@ -60,7 +60,7 @@ public class UserController {
         Subject subject = SecurityUtils.getSubject();
 
         // 计算加密结果
-        // 使用 MD5 加密，随机盐为用户名，加密次数为 199
+        // 使用 MD5 加密，随机盐为用户名，加密次数为 2
         String hash = new SimpleHash("MD5", password, "X.0*o", 2).toHex();
 
         //封装用户的登陆数据
@@ -68,7 +68,6 @@ public class UserController {
         // 登陆
         try {
             subject.login(token);
-            return "/index";
         } catch (UnknownAccountException unknownAccountException) {
             System.out.println("用户名不存在,controller");
             model.addAttribute("msg", "用户名不存在");
@@ -78,6 +77,14 @@ public class UserController {
             model.addAttribute("msg", "密码错误");
             return "login";
         }
+
+        if (subject.isAuthenticated()) {
+            // 是否具有角色
+//            subject.hasRole();
+//            subject.isPermitted();
+            return "/index";
+        }
+        return "unauthorized";
     }
 
     @RequestMapping("/unauthorized")

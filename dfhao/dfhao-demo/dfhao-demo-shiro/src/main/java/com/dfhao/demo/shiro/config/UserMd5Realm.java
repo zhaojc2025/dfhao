@@ -32,14 +32,15 @@ public class UserMd5Realm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         System.out.println("执行授权:" + Thread.currentThread().getName());
+        String primaryPrincipal = (String) principalCollection.getPrimaryPrincipal();
         Subject subject = SecurityUtils.getSubject();
         User user = (User) subject.getPrincipal();
         List<Auth> authList = authService.queryAuthByUserId(user.getId());
-        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         authList.forEach(auth -> {
-            info.addStringPermission(auth.getAuthInfo());
+            authorizationInfo.addStringPermission(auth.getAuthInfo());
         });
-        return info;
+        return authorizationInfo;
     }
 
     // 1.认证
