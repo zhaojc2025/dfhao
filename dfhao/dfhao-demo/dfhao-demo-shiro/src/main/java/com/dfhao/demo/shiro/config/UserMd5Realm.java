@@ -20,7 +20,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-
+/**
+ * 自定义 realm
+ */
 public class UserMd5Realm extends AuthorizingRealm {
 
     @Autowired

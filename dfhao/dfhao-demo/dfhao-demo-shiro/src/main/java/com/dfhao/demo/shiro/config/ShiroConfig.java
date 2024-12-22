@@ -10,16 +10,28 @@ import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * shiro配置类
+ */
 @Configuration
 public class ShiroConfig {
 
 
-    // 创建 shirofilter
+    /**
+     * 创建 shiroFilter
+     * 负责拦截所有请求
+     *
+     * @param defaultWebSecurityManager
+     * @return
+     */
     @Bean("shiroFilterFactoryBean")
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager defaultWebSecurityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         // 关联 securityManager
         shiroFilterFactoryBean.setSecurityManager(defaultWebSecurityManager);
+
+        // 配置公共资源 anon
+        // 配置受限资源 authc
 
         // 配置系统受限资源
         // anon :无需认证就可访问
@@ -47,7 +59,13 @@ public class ShiroConfig {
         return shiroFilterFactoryBean;
     }
 
-    // 创建安全管理器
+
+    /**
+     * 创建安全管理器
+     *
+     * @param realm
+     * @return
+     */
     @Bean
     public DefaultWebSecurityManager getDefaultWebSecurityManager(UserMd5Realm realm) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
@@ -59,12 +77,16 @@ public class ShiroConfig {
         // hex 编码
         credentialsMatcher.setStoredCredentialsHexEncoded(true);
         realm.setCredentialsMatcher(credentialsMatcher);
-        // 关联 realm
+        // 设置 realm
         securityManager.setRealm(realm);
         return securityManager;
     }
 
-    // 创建 realm 对象
+
+    /**
+     * 创建自定义 realm
+     * @return
+     */
     @Bean("userMd5Realm")
     public UserMd5Realm userRealm() {
         return new UserMd5Realm();
