@@ -12,11 +12,14 @@
 
     <modules>
         <module>dfhao-admin</module>
-        <module>dfhao-base-shiro</module>
-        <module>dfhao-base-service</module>
+
+        <module>dfhao-shiro</module>
+
         <module>dfhao-common</module>
+        <module>dfhao-db</module>
+
+        <module>dfhao-base-service</module>
         <module>dfhao-common-mybatis</module>
-        <module>dfhao-common-excel</module>
         <module>dfhao-demo/dfhao-demo-shiro</module>
         <module>dfhao-demo/dfhao-demo-swagger</module>
     </modules>
@@ -42,6 +45,7 @@
         <mybatis-spring-boot-starter.version>2.3.1</mybatis-spring-boot-starter.version>
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <druid-spring-boot-starter.version>1.2.22</druid-spring-boot-starter.version>
+        <flyway.version>7.1.1</flyway.version>
 
         <shiro-spring-boot-web-starter.version>2.0.2</shiro-spring-boot-web-starter.version>
         <java-jwt.version>4.4.0</java-jwt.version>
@@ -93,6 +97,11 @@
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
 
             <!--数据库配置-->
             <dependency>
@@ -109,6 +118,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.version}</version>
             </dependency>
 
             <!--shiro 配置-->

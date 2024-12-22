@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dfhao-base-shiro</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>dfhao-db</artifactId>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>com.dfhao</groupId>
@@ -14,17 +14,12 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <modules>
+        <module>dfhao-db-api</module>
+        <module>dfhao-db-starter</module>
+    </modules>
 
     <dependencies>
-        <!--shiro 配置-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-web-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-        </dependency>
     </dependencies>
+
 </project>

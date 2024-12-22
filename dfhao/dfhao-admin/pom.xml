@@ -17,6 +17,11 @@
     <dependencies>
         <dependency>
             <groupId>com.dfhao</groupId>
+            <artifactId>dfhao-shiro-starter</artifactId>
+            <version>${dfhao.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dfhao</groupId>
             <artifactId>dfhao-common-mybatis</artifactId>
         </dependency>
         <dependency>
