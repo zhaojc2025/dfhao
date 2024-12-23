@@ -69,14 +69,7 @@ public class ShiroConfig {
     @Bean
     public DefaultWebSecurityManager getDefaultWebSecurityManager(UserMd5Realm realm) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
-        // 设置加密算法
-        HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
-        credentialsMatcher.setHashAlgorithmName("MD5");
-        // 设置散列次数
-        credentialsMatcher.setHashIterations(2);
-        // hex 编码
-        credentialsMatcher.setStoredCredentialsHexEncoded(true);
-        realm.setCredentialsMatcher(credentialsMatcher);
+
         // 设置 realm
         securityManager.setRealm(realm);
         return securityManager;
@@ -89,7 +82,16 @@ public class ShiroConfig {
      */
     @Bean("userMd5Realm")
     public UserMd5Realm userRealm() {
-        return new UserMd5Realm();
+        UserMd5Realm realm = new UserMd5Realm();
+        // 设置加密算法
+        HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
+        credentialsMatcher.setHashAlgorithmName("MD5");
+        // 设置散列次数
+        credentialsMatcher.setHashIterations(2);
+        // hex 编码
+        credentialsMatcher.setStoredCredentialsHexEncoded(true);
+        realm.setCredentialsMatcher(credentialsMatcher);
+        return realm;
     }
 
     // 整合 thymeleaf-extras-shiro

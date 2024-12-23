@@ -16,6 +16,12 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.dfhao</groupId>
+            <artifactId>dfhao-common</artifactId>
+            <version>${dfhao.version}</version>
+        </dependency>
+
         <!--shiro 配置-->
         <dependency>
             <groupId>org.apache.shiro</groupId>

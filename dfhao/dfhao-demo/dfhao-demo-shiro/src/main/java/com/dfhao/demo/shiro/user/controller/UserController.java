@@ -37,27 +37,6 @@ public class UserController {
     public String login(String userName, String password, Model model) {
         // 获取当前用户
         Subject subject = SecurityUtils.getSubject();
-        //封装用户的登陆数据
-        UsernamePasswordToken token = new UsernamePasswordToken(userName, password);
-        // 登陆
-        try {
-            subject.login(token);
-            return "/index";
-        } catch (UnknownAccountException unknownAccountException) {
-            System.out.println("用户名不存在,controller");
-            model.addAttribute("msg", "用户名不存在");
-            return "login";
-        } catch (IncorrectCredentialsException incorrectCredentialsException) {
-            System.out.println("密码错误,controller");
-            model.addAttribute("msg", "密码错误");
-            return "login";
-        }
-    }
-
-    @RequestMapping("/loginMd5")
-    public String loginMd5(String userName, String password, Model model) {
-        // 获取当前用户
-        Subject subject = SecurityUtils.getSubject();
 
         // 计算加密结果
         // 使用 MD5 加密，随机盐为用户名，加密次数为 2

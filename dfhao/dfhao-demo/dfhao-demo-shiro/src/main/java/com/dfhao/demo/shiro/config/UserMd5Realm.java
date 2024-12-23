@@ -1,5 +1,6 @@
 package com.dfhao.demo.shiro.config;
 
+import cn.hutool.extra.spring.SpringUtil;
 import com.dfhao.demo.shiro.user.entry.Auth;
 import com.dfhao.demo.shiro.user.entry.User;
 import com.dfhao.demo.shiro.user.service.AuthService;
@@ -25,8 +26,6 @@ import java.util.List;
  */
 public class UserMd5Realm extends AuthorizingRealm {
 
-    @Autowired
-    private UserService userService;
     @Autowired
     private AuthService authService;
 
@@ -55,6 +54,7 @@ public class UserMd5Realm extends AuthorizingRealm {
 
 //        UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) authenticationToken;
 
+        UserService userService = SpringUtil.getBean(UserService.class);
         User user = userService.queryUserByUserName(userName);
         // 用户名认证
         if (user == null || StringUtils.isBlank(user.getUserName())) {
