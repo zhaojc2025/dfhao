@@ -9,7 +9,14 @@ spring:
   redis:
     host: ${REDIS_URL:127.0.0.1}
     port: ${REDIS_PORT:6379}
-    password: ${REDIS_PWD:123456}
+    password: ${REDIS_PWD:iZiyou.1234}
+  flyway:
+    enabled: true
+    locations: classpath:db/mysql
+    # 当迁移时发现目标schema非空，而且带有没有元数据的表时，是否自动执行基准迁移
+    baseline-on-migrate: true
+    # 是否允许无序的迁移 开发环境最好开启, 生产环境关闭
+    out-of-order: true
 logging:
   level:
     sql: info
