@@ -18,6 +18,8 @@
         <module>dfhao-common</module>
         <module>dfhao-db</module>
 
+        <module>dfhao-generator</module>
+
         <module>dfhao-base-service</module>
         <module>dfhao-common-mybatis</module>
         <module>dfhao-demo/dfhao-demo-shiro</module>
@@ -44,6 +46,7 @@
         <mysql.version>8.0.33</mysql.version>
         <mybatis-spring-boot-starter.version>2.3.1</mybatis-spring-boot-starter.version>
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.9</mybatis-plus-generator.version>
         <druid-spring-boot-starter.version>1.2.22</druid-spring-boot-starter.version>
         <flyway.version>7.1.1</flyway.version>
 
@@ -74,6 +77,12 @@
                 <version>${dfhao.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.dfhao</groupId>
+                <artifactId>dfhao-generator</artifactId>
+                <version>${dfhao.version}</version>
+            </dependency>
+
             <!--hutool-->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -101,6 +110,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
             </dependency>
 
             <!--数据库配置-->
