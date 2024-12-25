@@ -9,7 +9,7 @@ spring:
   redis:
     host: ${REDIS_URL:127.0.0.1}
     port: ${REDIS_PORT:6379}
-    password: ${REDIS_PWD:iZiyou.1234}
+    password: ${REDIS_PWD:123456}
   flyway:
     enabled: true
     locations: classpath:db/mysql
